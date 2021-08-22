@@ -1,0 +1,304 @@
+// LAYOUT
+
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@500&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Commissioner", sans-serif;
+}
+
+nav {
+  height: 10vh;
+}
+
+.navbar-brand {
+  margin-left: 1em;
+}
+
+.brand-text {
+  color: $lightblue;
+  font-weight: bold;
+}
+
+.navlink {
+  color: $black;
+  margin-left: 3em;
+
+  &:last-child {
+    margin-right: 1.5em;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+}
+
+.navbar-toggler svg {
+  color: $orange;
+}
+
+.hr {
+  border: 2px solid $orange;
+  width: 13.2em;
+  margin-top: -0.6em;
+  margin-left: 0;
+}
+
+.hero-container {
+  height: 140vh;
+  background-color: $lightblue;
+}
+
+@media screen and (min-width: 768px) and (min-height: 500px) {
+  .hero-container {
+    height: 90vh;
+    clip-path: polygon(
+      0 0,
+      0 83%,
+      8% 89%,
+      18% 94%,
+      30% 98%,
+      43% 100%,
+      50% 100%,
+      57% 100%,
+      70% 98%,
+      82% 94%,
+      92% 89%,
+      100% 83%,
+      100% 0
+    );
+  }
+}
+
+.scroll-down-container {
+  margin-top: 3em;
+}
+
+@media screen and (min-width: 1024px) {
+  .scroll-down-container {
+    margin-top: 7.5em;
+  }
+}
+
+.icons-container {
+  position: absolute;
+  right: 1em;
+  top: 64em;
+
+  a {
+    color: $grayblue;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icons-container {
+    top: 44em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .icons-container {
+    right: 5em;
+  }
+}
+
+.hero-container ol.carousel-indicators li {
+  background-color: $grayblue;
+  border: 1px solid lighten($orange, 25);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 0.5em;
+
+  &.active {
+    background-color: $orange;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 8em;
+  .nav-link {
+    text-decoration: none;
+    text-align: left;
+    color: $orange;
+    font-size: 1.2em;
+    border-bottom: 5px solid darken($white, 10);
+    &:hover {
+      text-decoration: none;
+      color: lighten($lightblue, 3);
+      border-bottom: 5px solid lighten($lightblue, 3);
+    }
+  }
+  @media screen and (min-width: 502px) {
+    .nav-link {
+      font-size: 0.75em;
+    }
+  }
+  @media screen and (min-width: 680px) {
+    .nav-link {
+      font-size: 0.9em;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .nav-link {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .nav-link {
+      font-size: 1.4em;
+      margin-right: 1.2em;
+    }
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .nav-tabs {
+    margin-bottom: 0em;
+  }
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: $lightblue;
+  border-bottom: 5px solid $lightblue;
+}
+
+.centered-label {
+  display: flex;
+}
+
+.testimonials-container {
+  background-color: lighten($violetgray, 15);
+  margin-top: 6em;
+}
+
+.testimonials-container .card {
+  position: relative;
+  background-color: $orange;
+  color: $white;
+  border-radius: 15px;
+  padding: 0.8em;
+
+  .quote-left {
+    position: absolute;
+    left: 0.5em;
+    top: 0.5em;
+    color: lighten($violetgray, 15);
+  }
+
+  .quote-right {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    color: lighten($violetgray, 15);
+  }
+}
+
+.hr-2 {
+  border: 2px solid darken($violetgray, 30);
+  width: 4em;
+  margin: auto;
+}
+
+.testimonials-container ol.carousel-indicators li {
+  background-color: $grayblue;
+  border: 1px solid lighten($violetgray, 25);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 0.5em;
+
+  &.active {
+    background-color: $violetgray;
+  }
+}
+
+.hr-3 {
+  border: 2px solid darken($lightblue, 10);
+  width: 4em;
+}
+
+.contact-form-container .card {
+  background-color: darken($lightblue, 10);
+  box-shadow: 5px 5px 15px 3px lighten($orange, 30);
+  color: white;
+  border-radius: 30px;
+}
+
+.contact-form-container .card form {
+  input {
+    padding: 1em;
+    border-radius: 30px;
+    width: 28em;
+    &:hover,
+    &:focus {
+      border: 1px solid $orange;
+    }
+  }
+  textarea {
+    padding: 1em;
+    border-radius: 30px;
+    width: 28em;
+    resize: none;
+    &:hover,
+    &:focus {
+      border: 1px solid $orange;
+    }
+  }
+}
+
+.footer-container {
+  background-color: $orange;
+  color: white;
+}
+
+.hr-4 {
+  border: 2px solid $violetgray;
+  width: 6.5em;
+  margin-left: 0;
+}
+
+.hr-5 {
+  border: 2px solid $violetgray;
+  width: 4.1em;
+  margin-left: 0;
+}
+
+.footer-link {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+    color: lighten($violetgray, 18);
+  }
+}
+
+#back-to-top {
+  display: block;
+  position: fixed;
+  padding: 0.25em;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: $orange;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid $orange;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+    color: white;
+  }
+}

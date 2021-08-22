@@ -1,0 +1,53 @@
+// ANIMATIONS
+
+.double-down-arrow {
+  animation-name: up-down;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translatey(0px);
+  }
+  22% {
+    transform: translateY(-2px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+}
+
+.btn-entrance {
+  animation-name: btn-entrance;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+@keyframes btn-entrance {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btn-exit {
+  animation-name: btn-exit;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes btn-exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}

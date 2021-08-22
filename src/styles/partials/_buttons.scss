@@ -1,0 +1,59 @@
+// BUTTONS
+
+.btn-primaryy {
+  @include buttonSize;
+  background-color: $lightblue;
+  color: white;
+  border: 1px solid white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $lightblue;
+    background-color: white;
+    color: $lightblue;
+  }
+}
+
+.btn-secondaryy {
+  @include buttonSize;
+  background-color: white;
+  color: $lightblue;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $lightblue;
+    color: white;
+    border: 1px solid white;
+  }
+}
+
+.btn-tertiary {
+  @include buttonSize;
+  background-color: $orange;
+  color: white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: white;
+    color: $orange;
+    border: 1px solid $orange;
+  }
+}
+
+.btn-quaternary {
+  @include buttonSize;
+  background-color: $orange;
+  border: 1px solid lighten($orange, 20);
+  color: white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: white;
+    color: $orange;
+    border: 1px solid $orange;
+  }
+}

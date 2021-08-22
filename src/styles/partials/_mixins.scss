@@ -1,0 +1,15 @@
+// MIXINS
+
+@mixin buttonSize {
+  border-radius: 25px;
+  width: 9em;
+  height: 3em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none !important;
+    box-shadow: none;
+    font-weight: bold;
+  }
+}
